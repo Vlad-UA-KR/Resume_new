@@ -1,0 +1,307 @@
+.main {
+	flex: 1 1 auto;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	background-color: darken($color: #2b4b82, $amount: 5);
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 5%;
+		row-gap: 40px;
+	}
+}
+
+.horizontal {
+	height: 1px;
+	background-color: white;
+	width: 25px;
+}
+
+.vertical {
+	height: 20px;
+	background-color: white;
+	width: 1px;
+	margin: 0 10px 0 10px;
+}
+
+.icon-main {
+	font-size: 35px;
+	padding-bottom: 25px;
+	color: white;
+}
+
+.icon-main + .horizontal {
+	width: 35px;
+}
+
+.icon-main:hover,
+.big-blok__icon:hover,
+.small-blok__icon:hover {
+	color: #f7b4a7;
+	transition: all 0.2s ease-out;
+}
+
+// ----------------Big-Block-------------
+
+.big-blok {
+	width: 100%;
+	max-width: 760px;
+	min-height: 650px;
+	box-shadow: 0px 0px 10px black;
+	padding: 30px 50px;
+	background-color: #2b4b82;
+
+	&__title {
+		padding-top: 15px;
+		font-size: 28px;
+		font-weight: 600;
+		color: white;
+	}
+
+	.icon-main:not(:first-child) {
+		padding-top: 25px;
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+		padding-top: 10px;
+		flex-wrap: wrap;
+	}
+
+	&__icon {
+		padding-top: 25px;
+		padding-bottom: 15px;
+		font-size: 25px;
+		color: white;
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		font-weight: 500;
+		padding-top: 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+	}
+
+	&__university {
+		font-size: 18px;
+	}
+
+	&__date {
+		font-size: 25px;
+		opacity: 0.1;
+		font-family: "Roboto Mono", monospace;
+		padding-left: 40px;
+	}
+}
+
+// ----------------Small-Block-------------
+
+.small-blok {
+	width: 30%;
+	min-width: 350px;
+	height: 650px;
+	padding: 30px 40px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 10px black;
+	background-color: #2b4b82;
+
+	// ----------------Small-Photo--------
+
+	& .horizontal {
+		align-self: flex-start;
+	}
+
+	&__photo {
+		width: 100%;
+		max-width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		margin-bottom: 30px;
+		box-shadow: 0 0 10px black;
+	}
+
+	&__icon {
+		font-size: 25px;
+		align-self: flex-start;
+		margin-bottom: 20px;
+		color: white;
+	}
+
+	&__data {
+		align-self: flex-start;
+		margin-top: 10px;
+	}
+
+	&__tel {
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	&__tel:hover {
+		color: #f7b4a7;
+		transition: all 0.2s ease-out;
+	}
+
+	&__social {
+		column-gap: 10px;
+		align-self: flex-start;
+		margin-top: auto;
+		a {
+			font-size: 20px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+// --------------Small-Slider-------
+
+.small-blok-slider {
+	position: relative;
+	& .slick-list {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+	& .slick-track {
+		display: flex;
+	}
+	& .slick-slide {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.btn {
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	bottom: 50px;
+	z-index: 5;
+	background-color: transparent;
+}
+
+.btn__left {
+	left: 40px;
+}
+
+.btn__right {
+	left: 80px;
+}
+
+.prevArr,
+.nextArr {
+	width: 100%;
+	height: 100%;
+	fill: white;
+}
+
+.nextArr:hover,
+.prevArr:hover {
+	fill: #f7b4a7;
+	transition: all 0.2s ease-out;
+}
+
+// ----rgb(19, 17, 17)--------Slides-------------
+.slide {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		padding-top: 15px;
+		font-size: 28px;
+		font-weight: 600;
+		color: white;
+	}
+
+	&__subtitle {
+		align-self: flex-end;
+		font-size: 22px;
+		padding-top: 35px;
+		font-weight: 500;
+		color: white;
+	}
+
+	&__subtitle + .horizontal {
+		align-self: flex-end;
+		margin-top: 10px;
+	}
+
+	&__text {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 35px;
+	}
+
+	&__procent {
+		opacity: 0.2;
+	}
+
+	&__name {
+		opacity: 0.75;
+	}
+
+	&__progress-contianer {
+		width: 100%;
+		height: 3px;
+		background-color: white;
+		margin-top: 10px;
+	}
+
+	&__progress-contianer:hover {
+		background-color: #f7b4a7;
+		transition: all 0.2s ease-out;
+	}
+
+	&__progress {
+		&_css {
+			width: 15%;
+			height: 100%;
+			background-color: gray;
+		}
+
+		&_html {
+			width: 10%;
+			height: 100%;
+			background-color: gray;
+		}
+
+		&_js {
+			width: 55%;
+			height: 100%;
+			background-color: gray;
+		}
+
+		&_jq {
+			width: 60%;
+			height: 100%;
+			background-color: gray;
+		}
+	}
+
+	&__list {
+		margin-top: 40px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+
+	&__list-item {
+		i {
+			color: white;
+		}
+	}
+
+	&__list-item:hover {
+		i {
+			color: #f7b4a7;
+			transition: all 0.2s ease-out;
+		}
+	}
+}
