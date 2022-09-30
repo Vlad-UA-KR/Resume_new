@@ -12,7 +12,7 @@ $(function () {
 $(function () {
 	$('.work-slider').slick({
 		slidesToShow: 1,
-		speed: 500,
+		speed: 1200,
 		arrows: false,
 		dots: true,
 		fade: true,
